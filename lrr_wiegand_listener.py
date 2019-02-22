@@ -8,7 +8,6 @@
 
 import pigpio
 from Crypto.Cipher import DES3
-from Crypto.Random import get_random_bytes
 from binascii import hexlify
 
 iclass_key = "00000000000000000000000000000000"
