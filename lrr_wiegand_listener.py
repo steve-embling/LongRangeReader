@@ -183,7 +183,7 @@ if __name__ == "__main__":
         fac_code, card_num, card_num_no_fac, hidHeader = decodeWiegandData(bits, wiegand_binary)
         wiegand_binary = hidHeader + wiegand_binary
         wiegand_hex = "%016X" % int(wiegand_binary, 2)
-        enc_hex = "FFFFFFFFFFFFFFFF".upper()  # To Implement
+        enc_hex = encryptIClass(wiegand_hex)
         addCardsToCSV(bits, wiegand_binary, wiegand_hex, enc_hex, fac_code, card_num, card_num_no_fac)
 
         # Debug output to console
