@@ -135,7 +135,7 @@ if __name__ == "__main__":
             key = iclass_key.decode("hex")
             cipher = DES3.new(key, DES3.MODE_ECB)
             plaintext = wiegand_hex.decode("hex")
-            return hexlify(cipher.encrypt(plaintext))
+            return hexlify(cipher.encrypt(plaintext)).upper()
 
     # Add scanned cards to CSV file
     def addCardsToCSV(bits, wiegand_binary, wiegand_hex, enc_hex, fac_code, card_num, card_num_no_fac):
